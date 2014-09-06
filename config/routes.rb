@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resource :dashboard, only: [:show]
   resource :session, only: [:new, :create, :destroy]
+  resource :search, only: [:show]
 
   resources :users, only: [:index, :new, :show, :create] do
     post 'follow' => 'following_relationships#create'
